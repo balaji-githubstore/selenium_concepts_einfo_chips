@@ -24,6 +24,8 @@ driver.find_element(By.ID, "password_step_input").send_keys("welcom123")
 # click on custom radio button
 driver.find_element(By.XPATH, "//input[@name='sex']").click()
 
+#20 Dec 2000
+
 # click on signup
 driver.find_element(By.NAME, "websubmit").click()
 time.sleep(5)
