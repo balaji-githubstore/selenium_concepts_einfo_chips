@@ -27,3 +27,5 @@ driver.find_element(By.XPATH, "//input[@name='sex']").click()
 # click on signup
 driver.find_element(By.NAME, "websubmit").click()
 time.sleep(5)
+
+driver.quit()
