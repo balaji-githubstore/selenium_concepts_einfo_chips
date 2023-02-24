@@ -8,8 +8,8 @@ from demo1_basics.demo import MyLocator
 driver=webdriver.Chrome()
 driver.get("https://www.facebook.com/")
 
-# ele=driver.find_element(By.ID,"email")
-# ele.send_keys("hello12344@gmail.com")
+ele=driver.find_element(By.ID,"email")
+ele.send_keys("hello12344@gmail.com")
 
 
 
