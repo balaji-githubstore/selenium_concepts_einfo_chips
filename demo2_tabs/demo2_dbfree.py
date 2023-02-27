@@ -27,13 +27,19 @@ for window in driver.window_handles:
     print(window)
     driver.switch_to.window(window)
     print(driver.title)
-    if "phpMy" in driver.title:
+    if driver.title=="phpMyAdmin":
         break
     print("-------")
 
 
 #driver will point to tab with title phpMyAdmin
 driver.find_element(By.ID,"input_username").send_keys("bala")
+
+driver.close()
+
+driver.switch_to.window(driver.window_handles[0])
+
+print(driver.title)
 
 time.sleep(5)
 
