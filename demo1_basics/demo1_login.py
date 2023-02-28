@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from demo1_basics.demo import MyLocator
+
 
 driver=webdriver.Chrome()
 driver.get("https://www.facebook.com/")

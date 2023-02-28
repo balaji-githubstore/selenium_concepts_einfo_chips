@@ -1,3 +1,4 @@
+import random
 import time
 
 from selenium import webdriver
@@ -31,7 +32,10 @@ select_day=Select(driver.find_element(By.ID,"day"))
 select_day.select_by_visible_text("20")
 
 select_month=Select(driver.find_element(By.XPATH,"//select[@title='Month']"))
-select_month.select_by_visible_text("Dec")
+# select_month.select_by_visible_text("Dec")
+
+ls=select_month.options
+select_month.select_by_visible_text(random.choice(ls).text)
 
 #select year as 2000
 select_year=Select(driver.find_element(By.ID,"year"))
