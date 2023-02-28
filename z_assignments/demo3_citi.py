@@ -42,9 +42,18 @@ d.find_element(By.ID,"cvvnumber").send_keys("889")
 # d.find_element(By.LINK_TEXT,"14").click()
 
 #approach 3 - javascript
-d.execute_script("document.querySelector('#bill-date-long').value='11/09/2000'")
+ele1=d.find_element(By.XPATH,"//input[@name='DOB']")
+d.execute_script("arguments[0].value='11/09/2000'",ele1)
 
-# d.execute_script("document.querySelector(\"input[name='DOB']\").value='17/06/1999'")
+d.find_element(By.XPATH,"//input[@value='PROCEED']").click()
+
+
+actual_error1=d.find_element(By.XPATH,"//li[contains(text(),'Term')]").text
+
+actual_error2=d.find_element(By.XPATH,"//div[@role='dialog']").text
+
+print(actual_error1)
+print(actual_error2)
 
 time.sleep(5)
 d.quit()
