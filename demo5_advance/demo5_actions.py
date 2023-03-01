@@ -13,9 +13,15 @@ driver.get("https://google.com/")
 actions = webdriver.ActionChains(driver)
 
 actions.key_down(webdriver.Keys.SHIFT)\
-    .send_keys("hello world").key_up(webdriver.Keys.SHIFT).pause(1)\
-    .send_keys(webdriver.Keys.ARROW_DOWN).send_keys(webdriver.Keys.ARROW_DOWN)\
-    .send_keys(webdriver.Keys.ARROW_DOWN).pause(1).send_keys(webdriver.Keys.ENTER).perform()
+    .send_keys("hello world").key_up(webdriver.Keys.SHIFT).pause(1).perform()
+
+# actions.send_keys(webdriver.Keys.ARROW_DOWN).send_keys(webdriver.Keys.ARROW_DOWN)\
+#     .send_keys(webdriver.Keys.ARROW_DOWN).perform()
+
+for i in range(1,11):
+    actions.send_keys(webdriver.Keys.ARROW_DOWN).perform()
+
+actions.pause(1).send_keys(webdriver.Keys.ENTER).perform()
 
 # actions.send_keys(webdriver.Keys.F5).perform()
 # driver.refresh()

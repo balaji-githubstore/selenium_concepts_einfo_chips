@@ -20,6 +20,12 @@ d.find_element(By.XPATH,"//div[contains(text(),'Forgot User')]").click()
 d.find_element(By.LINK_TEXT,"select your product type").click()
 d.find_element(By.LINK_TEXT,"Credit Card").click()
 
+a="citiCard"
+for i in range(1,4):
+    print("#citiCard"+str(i))
+    d.find_element(By.CSS_SELECTOR, "#citiCard"+str(i)).send_keys("7897")
+
+
 d.find_element(By.CSS_SELECTOR,"#citiCard1").send_keys("7897")
 d.find_element(By.CSS_SELECTOR,"input[name='citiCard2']").send_keys("7897")
 d.find_element(By.CSS_SELECTOR,"[name='citiCard3']").send_keys("7897")

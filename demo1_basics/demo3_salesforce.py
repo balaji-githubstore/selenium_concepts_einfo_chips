@@ -1,3 +1,4 @@
+import random
 import time
 
 from selenium import webdriver
@@ -23,7 +24,9 @@ select_title.select_by_visible_text("IT Manager")
 
 # 6.	Select Employees as “101-500 employees”
 select_emp_count=Select(driver.find_element(By.NAME,"CompanyEmployees"))
-select_emp_count.select_by_visible_text("101 - 500 employees")
+
+options_ele=select_emp_count.options
+select_emp_count.select_by_visible_text(random.choice(options_ele).text)
 
 # 9.	Click on check box
 driver.find_element(By.XPATH,"//div[@class='checkbox-ui']").click()
