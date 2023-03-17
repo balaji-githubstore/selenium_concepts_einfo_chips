@@ -12,6 +12,8 @@ opt.accept_insecure_certs
 dic_pref={"download.default_directory":r"C:\Mine\Company\iFuture"}
 opt.add_experimental_option("prefs",dic_pref)
 
+opt.add_experimental_option("mobileEmulation",{"deviceName":"Pixel 5"})
+
 driver=webdriver.Chrome(options=opt)
 driver.maximize_window()
 driver.implicitly_wait(10)

@@ -1,11 +1,15 @@
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
 
-driver = webdriver.Chrome()
+serv=Service(executable_path=r"C:\Users\JiDi\Downloads\chromedriver_win32 (5)\chromedriver.exe")
+opt=webdriver.ChromeOptions()
+
+driver = webdriver.Chrome(service=serv,options=opt)
 driver.maximize_window()
 driver.implicitly_wait(10)
 
