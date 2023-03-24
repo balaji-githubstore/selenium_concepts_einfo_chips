@@ -13,7 +13,7 @@ driver.get("https://nasscom.in/")
 print(len(driver.find_elements(By.XPATH,"//a[text()='Members Listing']")))
 
 #check for visiblity so element should be  present
-print(driver.find_element(By.XPATH,"//a[text()='Members Listing']").is_displayed() )
-
-time.sleep(5)
-driver.quit()
+# print(driver.find_element(By.XPATH,"//a[text()='Members Listing']").is_displayed() )
+#
+# time.sleep(5)
+# driver.quit()

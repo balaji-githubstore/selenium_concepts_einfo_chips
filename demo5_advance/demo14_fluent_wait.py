@@ -2,11 +2,14 @@ import time
 
 from selenium import webdriver
 from selenium.common import *
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver = webdriver.Chrome()
+serv_driver = Service(executable_path=r"C:\Users\JiDi\Downloads\chromedriver_win32 (5)\chromedriver.exe")
+
+driver = webdriver.Chrome(service=serv_driver)
 driver.maximize_window()
 
 driver.get("https://www.google.com")  # wait for page load to complete
