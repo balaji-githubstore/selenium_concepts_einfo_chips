@@ -16,6 +16,9 @@ print(size)
 loc=driver.find_element(By.LINK_TEXT,"Gmail").location
 print(loc)
 
+print(loc['x']+10)
+print(loc['y']+5)
+
 print(driver.get_window_size())
 
 print(len(driver.find_elements(By.XPATH, "//*[@id='123']")))
